@@ -110,6 +110,9 @@ void *xmalloc(size_t);
 void *xrealloc(void *, size_t);
 char *xstrdup(char *);
 
+// from @LukeSmithxyz
+void externalpipe(const Arg *);
+
 /* config.h globals */
 extern char *utmp;
 extern char *stty_args;
