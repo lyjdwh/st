@@ -130,7 +130,9 @@ unsigned int defaultitalic = 7;
 unsigned int defaultunderline = 7;
 /*
  * Default shape of cursor
+ * 1: Blinking Block ("█")
  * 2: Block ("█")
+ * 3: Blinking Underline ("_")
  * 4: Underline ("_")
  * 6: Bar ("|")
  * 7: Snowman ("☃")
