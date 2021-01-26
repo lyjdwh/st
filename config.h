@@ -5,7 +5,7 @@
  *
  * font: see http://freedesktop.org/software/fontconfig/fontconfig-user.html
  */
-static char *font = "Source Code Pro:pixelsize=20:antialias=true:autohint=true";
+static char *font = "Source Code Pro:pixelsize=18:antialias=true:autohint=true";
 static int borderpx = 2;
 
 /*
@@ -186,7 +186,7 @@ static MouseShortcut mshortcuts[] = {
 };
 
 /* Internal keyboard shortcuts. */
-#define MODKEY Mod1Mask
+#define MODKEY Mod4Mask
 #define AltMask Mod1Mask
 #define TERMMOD (ControlMask|ShiftMask)
 
@@ -218,10 +218,9 @@ static Shortcut shortcuts[] = {
     { MODKEY,               XK_j,           kscrolldown,    {.i =  1} },
     { MODKEY|ControlMask,   XK_k,           kscrollup,      {.i = -1} },
     { MODKEY|ControlMask,   XK_j,           kscrolldown,    {.i = -1} },
-	{ MODKEY,               XK_l,           copyurl,        {.i =  0} },
-	{ Mod1Mask|ControlMask, XK_l,           externalpipe,   {.v = openurlcmd } },
-	{ Mod1Mask,             XK_y,           externalpipe,   {.v = copyurlcmd } },
-	{ Mod1Mask,             XK_o,           externalpipe,   {.v = copyoutput } },
+	{ MODKEY|ControlMask, XK_u,           externalpipe,   {.v = openurlcmd } },
+	{ MODKEY,             XK_u,           externalpipe,   {.v = copyurlcmd } },
+	{ MODKEY,             XK_o,           externalpipe,   {.v = copyoutput } },
 };
 
 /*
@@ -534,4 +533,3 @@ unsigned int fgCommandVisualLine = 232;
 
 unsigned int bgPos = 15;
 unsigned int fgPos = 16;
-
